@@ -297,7 +297,8 @@ div.vig-band + section::before {
 @media(max-width:960px){
   .n-links,.n-cta{display:none}.burger{display:flex}
   #sdots{display:none}
-  .w{padding:0 28px}.pad{padding:72px 0}.pads{padding:60px 0}
+  nav{padding:0 20px}
+  .w{padding:0 24px}.pad{padding:72px 0}.pads{padding:60px 0}
   .prog-grid,.terroir-grid,.coff-grid,.xp-grid,.loc-grid,.c-layout,.nat-grid{grid-template-columns:1fr;gap:44px}
   .prog-vis img{height:320px}
   .panel.on{grid-template-columns:1fr}
@@ -309,10 +310,33 @@ div.vig-band + section::before {
   .int-tall{height:280px}.int-cell{height:220px}
   .int-duo{grid-template-columns:1fr}
   .c-form{padding:28px}
-  .vig-text{left:28px}
-  .archi-label{left:28px;bottom:28px}
-  .contact-hero-text{left:28px;right:28px}
+  .vig-text{left:24px}
+  .archi-label{left:24px;bottom:24px}
+  .contact-hero-text{left:24px;right:24px}
   .ter-stats{gap:28px}
+  .hub-grid{grid-template-columns:1fr!important;gap:44px!important}
+  .ctitle{font-size:clamp(56px,14vw,168px)}
+  .ribbon{font-size:11px;padding:9px 16px}
+  .ctag{font-size:13px;letter-spacing:.08em}
+}
+@media(max-width:480px){
+  nav{padding:0 16px}
+  .w{padding:0 16px}.pad{padding:56px 0}.pads{padding:44px 0}
+  .ctitle{font-size:clamp(44px,13vw,168px)}
+  .n-logo{font-size:20px}
+  .csub{font-size:13px}
+  .ctag{font-size:12px}
+  .h2{font-size:clamp(32px,8vw,66px)}
+  .lead{font-size:16px}
+  .ter-side{flex-direction:column;height:auto}
+  .ter-side-cell{height:180px}
+  .prest-grid{grid-template-columns:1fr}
+  .tabs{flex-direction:column}
+  .tab{flex:1 0 auto}
+  .vig-text p{font-size:16px}
+  .sn{font-size:38px!important}
+  .c-form{padding:20px 16px}
+  .hub-grid > div:last-child{gap:1px!important}
 }
 @media(max-width:960px){
   .fiscal-grid{grid-template-columns:repeat(3,1fr) !important}
@@ -765,7 +789,7 @@ div.vig-band + section::before {
 <!-- HUB TERRAOCCITANA -->
 <section id="hub" style="background:var(--ard);padding:80px 0;border-top:1px solid rgba(184,132,31,.15)">
   <div class="w">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center">
+    <div class="hub-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center">
       <div>
         <p style="font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--or-d);margin-bottom:14px;display:flex;align-items:center;gap:10px">
           <span style="font-size:7px;opacity:.7">◆</span>TerraOccitana<span style="font-size:7px;opacity:.7">◆</span>
