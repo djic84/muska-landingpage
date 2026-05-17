@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Résidence Muska — Frontignan · Pinède &amp; Minéral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--calc:#F5F0E8;--calc-d:#EDE7DA;--blanc:#FAFAF7;--or:#B8841F;--or-l:#C8922A;--or-d:#8E6516;--ard:#1A1714;--ard-m:#2C2723;--grey:#6B6052;--grey-l:#A89A85;--vigne:#4A5C3A;--nh:68px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--calc);font-family:'Montserrat',sans-serif;color:var(--ard);overflow-x:hidden}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:rgba(245,240,232,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(184,132,31,.15);box-shadow:0 2px 20px rgba(26,23,20,.06);transition:all .4s}
+nav.top{background:transparent;border-bottom:none;box-shadow:none}
+.n-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;letter-spacing:.2em;color:var(--or-d);text-decoration:none;transition:font-size .3s}
+.n-links{display:flex;gap:24px;list-style:none}
+.n-links a{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--ard);text-decoration:none;opacity:.6;transition:all .2s;font-weight:600}
+.n-links a:hover{opacity:1;color:var(--or-d)}
+.n-cta{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--or-d);border:1px solid var(--or);padding:9px 20px;text-decoration:none;transition:all .25s;font-weight:700}
+.n-cta:hover{background:var(--or-d);color:var(--blanc)}
+.burger{display:none;cursor:pointer;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.burger span{display:block;width:22px;height:1px;background:var(--ard)}
+.mmenu{display:none;position:fixed;inset:0;z-index:490;background:var(--calc);flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mmenu.open{display:flex}
+.mmenu a{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--ard);text-decoration:none;letter-spacing:.1em}
+.mmenu a:hover{color:var(--or-d)}
+/* DOTS */
+#sdots{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:400;display:flex;flex-direction:column;gap:10px}
+.sdot{width:6px;height:6px;border-radius:50%;background:var(--grey-l);opacity:.4;cursor:pointer;transition:all .3s}
+.sdot.on{background:var(--or-d);opacity:1;transform:scale(1.4)}
+/* HELPERS */
+section{position:relative;overflow:hidden}
+.w{max-width:1180px;margin:0 auto;padding:0 52px}
+.w-narrow{max-width:780px;margin:0 auto;padding:0 52px}
+.pad{padding:120px 0}.pads{padding:90px 0}
+.bg-c{background:var(--calc)}.bg-b{background:var(--blanc)}.bg-d{background:var(--calc-d)}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--or-d);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before,.eyebrow::after{content:"◆";font-size:7px;opacity:.7;flex-shrink:0}
+.h2{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,66px);font-weight:300;line-height:1.05;color:var(--ard)}
+.h2 em{font-style:italic;color:var(--or-d)}
+.lead{font-size:18px;line-height:1.85;color:var(--grey);font-weight:300}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--or-d);line-height:1.65;padding-left:18px;border-left:2px solid var(--or);margin:22px 0}
+.orn{display:flex;align-items:center;gap:14px;margin:28px 0}
+.orn-l{flex:1;height:1px;background:var(--or);opacity:.4}
+.orn-d{width:7px;height:7px;background:var(--or);transform:rotate(45deg);opacity:.7;flex-shrink:0}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .95s ease,transform .95s ease}
+.rv.on{opacity:1;transform:none}
+.rv-d{transition-delay:.15s}.rv-m{transition-delay:.28s}.rv-r{transition-delay:.44s}
+.cr{opacity:0;transform:scale(1.02);transition:opacity 1.1s ease,transform 1.1s ease}
+.cr.on{opacity:1;transform:scale(1)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes cUp{from{opacity:0;transform:translateY(58px)}to{opacity:1;transform:none}}
+@keyframes sb{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@keyframes glow{0%,100%{opacity:.85}50%{opacity:1}}
+/* COVER */
+#cover{height:100svh;min-height:680px;display:flex;align-items:center;justify-content:center;text-align:center;background:#1A1714}
+.cbg{position:absolute;inset:0}
+.cbg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;filter:brightness(.52) saturate(1.1)}
+.cbg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,240,232,.1) 0%,rgba(245,240,232,.45) 65%,var(--calc) 100%)}
+.cc{position:relative;z-index:2;padding:0 24px}
+.ribbon{display:inline-flex;align-items:center;gap:10px;padding:11px 28px;background:rgba(184,132,31,.95);color:var(--blanc);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px;animation:glow 3s ease-in-out infinite,fadeUp .8s .15s both}
+.ribbon::before,.ribbon::after{content:'';width:16px;height:1px;background:var(--blanc);opacity:.6}
+.cey{font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--or-d);opacity:0;animation:fadeUp .8s .4s both}
+.ctitle{font-family:'Cormorant Garamond',serif;font-size:clamp(80px,14vw,168px);font-weight:300;line-height:.88;letter-spacing:.08em;color:var(--calc);text-shadow:0 2px 30px rgba(26,23,20,.3)}
+.ch{display:inline-block;opacity:0;transform:translateY(58px);animation:cUp .8s cubic-bezier(.16,1,.3,1) both}
+.crule{width:55px;height:1px;background:var(--or-d);margin:26px auto;opacity:0;animation:fadeUp .8s 1.3s both}
+.csub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(14px,2vw,20px);color:var(--or-d);letter-spacing:.12em;opacity:0;animation:fadeUp .8s 1.4s both}
+.ctag{margin-top:10px;font-size:16px;letter-spacing:.18em;color:var(--calc);text-transform:uppercase;opacity:0;animation:fadeUp .8s 1.55s both;font-weight:500}
+.cscroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp .8s 2.1s both}
+.cscroll span{font-size:11px;letter-spacing:.2em;color:var(--or-d);text-transform:uppercase;font-weight:600}
+.cscroll svg{animation:sb 2.5s ease-in-out infinite}
+/* PROG */
+.prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:36px;background:rgba(184,132,31,.18)}
+.stat{background:var(--blanc);padding:32px 24px;text-align:center;border-top:3px solid transparent;transition:border-color .3s}.stat:hover{border-top-color:var(--or)}
+.sn{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:300;color:var(--or-d);line-height:1}
+.sl{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:6px;font-weight:600}
+.prog-vis{position:relative;overflow:hidden}
+.prog-vis img{width:100%;height:560px;object-fit:cover;display:block;transition:transform .8s}
+.prog-vis:hover img{transform:scale(1.04)}
+.prog-vis::after{content:'';position:absolute;top:12px;right:12px;bottom:12px;left:12px;border:1px solid rgba(245,240,232,.4);pointer-events:none}
+.prog-badge{position:absolute;bottom:-16px;left:-16px;background:var(--or-d);color:var(--blanc);padding:16px 22px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.7;z-index:2}
+/* TERROIR */
+#terroir{overflow:visible}
+#terroir::before{content:'1936';position:absolute;top:40px;right:-20px;font-family:'Cormorant Garamond',serif;font-size:clamp(120px,18vw,260px);font-weight:300;color:var(--or);opacity:.07;pointer-events:none;font-style:italic;z-index:0}
+.terroir-grid{display:grid;grid-template-columns:1fr 1fr;gap:84px;align-items:start;position:relative;z-index:1}
+.ti-wrap{position:relative;overflow:hidden}
+.ti-wrap img{width:100%;height:520px;object-fit:cover;display:block;transition:transform .8s}
+.ti-wrap:hover img{transform:scale(1.03)}
+.ti-badge{position:absolute;top:22px;left:22px;background:rgba(245,240,232,.95);backdrop-filter:blur(10px);border:1px solid rgba(184,132,31,.4);padding:16px 22px;text-align:center}
+.tbn{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--or-d);line-height:1}
+.tbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:4px;font-weight:600}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pill{padding:12px 20px;border:1px solid rgba(184,132,31,.4);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--or-d);font-weight:600;background:var(--blanc)}
+/* VIGNOB */
+.vig-band{position:relative;overflow:hidden;min-height:420px;height:auto}
+.vig-band img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
+.vig-band::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(26,23,20,.65) 0%,rgba(26,23,20,.15) 55%,transparent 100%)}
+.vig-text{position:relative;z-index:2;max-width:520px;padding:60px 60px;}
+.vig-text .h2{color:var(--calc)}.vig-text .h2 em{color:var(--or-l)}
+.vig-text p{font-size:18px;line-height:1.85;color:rgba(245,240,232,.85);margin-top:16px;font-weight:300}
+/* CADRE */
+.nat-duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(184,132,31,.12);margin-top:52px}
+.nat-card{position:relative;overflow:hidden;height:320px}
+.nat-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s;filter:brightness(.85)}
+.nat-card:hover img{transform:scale(1.06);filter:brightness(1)}
+.nat-cap{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(transparent,rgba(26,23,20,.85))}
+.nat-cap-t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--blanc)}
+.nat-cap-s{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.55);margin-top:4px;font-weight:600}
+.nat-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.nat-list{display:flex;flex-direction:column;gap:11px;margin-top:24px}
+.nat-item{display:flex;align-items:center;gap:12px;font-size:18px;color:var(--ard)}
+.nat-dot{width:5px;height:5px;border-radius:50%;background:var(--or-d);flex-shrink:0}
+/* ARCHI */
+.archi-band{height:55vh;min-height:320px;position:relative;overflow:hidden}
+.archi-band img{width:100%;height:100%;object-fit:cover;display:block}
+.archi-band::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,23,20,.62) 0%,rgba(26,23,20,.1) 55%,transparent 100%)}
+.archi-label{position:absolute;bottom:46px;left:60px;right:60px;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,2.6vw,30px);color:var(--blanc);max-width:560px;line-height:1.4}
+/* CUVEES */
+.tabs{display:flex;justify-content:center;border:1px solid rgba(184,132,31,.3);max-width:760px;margin:0 auto 44px;background:var(--blanc)}
+.tab{flex:1;padding:14px 6px;background:transparent;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--grey);transition:all .25s;border-right:1px solid rgba(184,132,31,.18)}
+.tab:last-child{border-right:none}
+.tab.on{background:var(--or-d);color:var(--blanc)}
+.tab:hover:not(.on){color:var(--or-d)}
+.panels{min-height:540px}
+.panel{display:none;animation:fadeUp .35s ease}
+.panel.on{display:grid;grid-template-columns:1fr 1.1fr;gap:1px;background:rgba(184,132,31,.16)}
+.p-info{background:var(--calc);padding:52px 44px;display:flex;flex-direction:column}
+.p-cey{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--or-d);margin-bottom:8px;font-weight:700}
+.p-name{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,62px);font-weight:300;line-height:.92;color:var(--ard);margin-bottom:28px}
+.p-name em{font-style:italic;color:var(--or-d)}
+.specs{display:flex;flex-direction:column}
+.spec{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(184,132,31,.14);font-size:17px}
+.spec .k{color:var(--grey)}.spec .v{color:var(--ard);font-weight:500}
+.pbox{background:rgba(184,132,31,.08);border:1px solid rgba(184,132,31,.38);padding:20px 24px;margin-top:auto}
+.pf{font-size:13px;letter-spacing:.12em;color:var(--or-d);font-weight:700;display:block;margin-bottom:4px}
+.pv{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--or-d)}
+.pn{font-size:14px;color:var(--grey);margin-top:4px;font-weight:500}
+.p-plan{background:var(--blanc);display:flex;align-items:center;justify-content:center;padding:20px}
+.p-plan img{width:100%;max-height:540px;object-fit:contain;display:block}
+.p-cta{display:inline-block;margin-top:18px;padding:12px 26px;border:1px solid var(--or-d);color:var(--or-d);font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;text-decoration:none;transition:all .25s;cursor:pointer;background:transparent;font-family:inherit}
+.p-cta:hover{background:var(--or-d);color:var(--blanc)}
+/* INTERIEURS */
+.int-hero{position:relative;overflow:hidden;height:70vh;min-height:500px}
+.int-hero img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s}
+.int-hero:hover img{transform:scale(1.03)}
+.int-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,20,.55) 0%,transparent 55%)}
+.int-label{position:absolute;bottom:40px;left:52px;z-index:2}
+.int-label h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,36px);color:var(--blanc);line-height:1.2}
+.int-label p{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.6);margin-top:6px;font-weight:600}
+.int-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3px}
+.int-cell{position:relative;overflow:hidden;height:320px}
+.int-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.int-cell:hover img{transform:scale(1.06)}
+.int-tall{height:643px}
+.int-duo{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:3px}
+.int-duo-cell{position:relative;overflow:hidden;height:380px}
+.int-duo-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.int-duo-cell:hover img{transform:scale(1.04)}
+/* TERRASSES */
+.ter-split{display:grid;grid-template-columns:1.2fr 1fr;gap:3px;min-height:580px}
+.ter-main{position:relative;overflow:hidden}
+.ter-main img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1s}
+.ter-main:hover img{transform:scale(1.04)}
+.ter-side{display:flex;flex-direction:column;gap:3px}
+.ter-side-cell{position:relative;overflow:hidden;flex:1}
+.ter-side-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s}
+.ter-side-cell:hover img{transform:scale(1.06)}
+.ter-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,20,.6) 0%,transparent 50%);pointer-events:none}
+.ter-stat{position:absolute;bottom:22px;left:22px;z-index:2}
+.ter-stat-n{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--or-l);line-height:1}
+.ter-stat-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,232,.7);font-weight:600;margin-top:2px}
+.ter-stats{display:flex;justify-content:center;gap:52px;margin-bottom:52px;flex-wrap:wrap}
+.ter-stat-box{text-align:center}
+.ter-divider{width:1px;background:rgba(184,132,31,.2)}
+/* ENTREE */
+.entrée-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.entrée-cell{position:relative;overflow:hidden;height:480px}
+.entrée-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s}
+.entrée-cell:hover img{transform:scale(1.04)}
+.entrée-label{position:absolute;bottom:0;left:0;right:0;padding:22px 26px;background:linear-gradient(transparent,rgba(26,23,20,.8))}
+.entrée-label h4{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--blanc)}
+.entrée-label p{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.55);margin-top:4px;font-weight:600}
+/* PREST */
+.prest-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(184,132,31,.15);margin-top:52px}
+.prest-card{background:var(--blanc);padding:36px 24px;text-align:center}
+.prest-ico{width:44px;height:44px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(184,132,31,.3);border-radius:50%}
+.prest-ico svg{width:22px;height:22px;stroke:var(--or-d);fill:none;stroke-width:1.4;stroke-linecap:round}
+.prest-t{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--ard);margin-bottom:8px}
+.prest-d{font-size:16px;line-height:1.65;color:var(--grey);font-weight:300}
+/* RE2020 */
+.re-wrap{position:relative;overflow:hidden}
+.re-bg{position:absolute;inset:0;z-index:0}
+.re-bg img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.18) saturate(.5)}
+.re-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(168,208,112,.2);margin-top:44px;position:relative;z-index:1}
+.re-card{background:var(--ard-m);padding:44px 32px}
+.re-card-t{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--blanc);margin:16px 0 10px}
+.re-card-d{font-size:17px;line-height:1.75;color:rgba(245,240,232,.55);font-weight:300}
+.certifs{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px;justify-content:center;position:relative;z-index:1}
+.certif{padding:12px 22px;border:1px solid rgba(168,208,112,.4);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#a8d070;font-weight:700}
+/* LOC */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.loc-map{position:relative;overflow:hidden}
+.loc-map img{width:100%;height:400px;object-fit:cover;display:block}
+.loc-map::after{content:'';position:absolute;top:12px;left:12px;right:12px;bottom:12px;border:1px solid rgba(184,132,31,.3);pointer-events:none}
+.loc-items{display:flex;flex-direction:column;margin-top:28px}
+.loc-item{display:flex;align-items:flex-start;gap:16px;padding:14px 0;border-bottom:1px solid rgba(184,132,31,.12)}
+.loc-ico{width:36px;height:36px;flex-shrink:0;border:1px solid rgba(184,132,31,.3);display:flex;align-items:center;justify-content:center}
+.loc-ico svg{width:16px;height:16px;stroke:var(--or-d);fill:none;stroke-width:1.5;stroke-linecap:round}
+.loc-t{font-size:18px;font-weight:600;color:var(--ard);margin-bottom:2px}
+.loc-d{font-size:16px;color:var(--grey);font-weight:300}
+/* VR */
+.vr-wrap{position:relative;overflow:hidden}
+.vr-bg{position:absolute;inset:0;z-index:0}
+.vr-bg img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.12) saturate(.4)}
+.xp-grid{display:grid;grid-template-columns:1fr 1fr;gap:84px;align-items:center;position:relative;z-index:1}
+.xp-img{position:relative;overflow:hidden}
+.xp-img img{width:100%;height:520px;object-fit:cover;display:block;transition:transform .8s}
+.xp-img:hover img{transform:scale(1.04)}
+.xp-list{margin-top:28px;display:flex;flex-direction:column}
+.xp-item{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-bottom:1px solid rgba(184,132,31,.25);font-size:18px;color:rgba(245,240,232,.8)}
+.xp-n{font-family:'Cormorant Garamond',serif;color:var(--or-d);font-size:18px;font-weight:400;flex-shrink:0;min-width:24px;font-style:italic}
+/* COFFRET */
+.coff-grid{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+.coff-img{position:relative;overflow:hidden}
+.coff-img img{width:100%;height:560px;object-fit:cover;display:block;transition:transform .8s}
+.coff-img:hover img{transform:scale(1.04)}
+.big-q{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4.2vw,50px);font-weight:300;line-height:1.15;color:var(--ard);margin-bottom:20px}
+.big-q em{font-style:italic;color:var(--or-d)}
+.coff-badge{display:flex;align-items:center;gap:18px;margin-top:28px;padding:22px 26px;border:1px solid var(--or);background:rgba(184,132,31,.06)}
+.cb-icon{font-size:30px;flex-shrink:0}
+.cb-text strong{display:block;color:var(--or-d);font-size:12px;font-weight:700;margin-bottom:4px}
+.cb-text span{font-size:17px;color:var(--grey);line-height:1.5}
+.alcool{font-size:9px;color:var(--grey-l);font-style:italic;margin-top:16px;opacity:.75}
+/* CONTACT */
+.contact-hero{position:relative;overflow:hidden;height:38vh;min-height:260px}
+.contact-hero img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.45)}
+.contact-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--calc) 100%)}
+.contact-hero-text{position:absolute;bottom:40px;left:52px;right:52px;z-index:2}
+.contact-hero-text .eyebrow{color:rgba(245,240,232,.6)}
+.contact-hero-text .h2{color:var(--blanc)}
+.ctabs{display:flex;border:1px solid rgba(184,132,31,.3);max-width:520px;margin:0 auto 48px}
+.ctab{flex:1;padding:14px;background:transparent;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--grey);transition:all .25s;border-right:1px solid rgba(184,132,31,.18)}
+.ctab:last-child{border-right:none}
+.ctab.on{background:var(--or-d);color:var(--blanc)}
+.ctab:hover:not(.on){color:var(--or-d)}
+.cpanel{display:none}.cpanel.on{display:block}
+.c-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:start}
+.c-info h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--ard);margin-bottom:16px}
+.c-info p{font-size:12.5px;line-height:1.85;color:var(--grey);font-weight:300;margin-bottom:20px}
+.c-btns{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.c-btn{display:flex;align-items:center;gap:14px;padding:16px 22px;border:1px solid rgba(184,132,31,.3);background:var(--blanc);font-size:16px;color:var(--ard);font-weight:500;text-decoration:none;transition:all .25s;cursor:pointer;font-family:inherit}
+.c-btn:hover{border-color:var(--or-d);background:rgba(184,132,31,.05);color:var(--or-d)}
+.c-btn svg{width:16px;height:16px;stroke:var(--or-d);fill:none;stroke-width:1.5;stroke-linecap:round;flex-shrink:0}
+.c-form{background:var(--blanc);padding:52px}
+.fi{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.fi label{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);font-weight:700}
+.fi input,.fi select,.fi textarea{border:1px solid rgba(184,132,31,.28);background:var(--calc);padding:14px 16px;font-family:'Montserrat',sans-serif;font-size:17px;color:var(--ard);outline:none;transition:border-color .2s;width:100%}
+.fi input:focus,.fi select:focus,.fi textarea:focus{border-color:var(--or-d)}
+.fi textarea{height:100px;resize:vertical}
+.fi-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ff{grid-column:1/-1}
+.btn-sub{width:100%;padding:18px;background:var(--or-d);color:var(--blanc);border:none;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .25s}
+.btn-sub:hover{background:var(--or)}
+.form-ok{display:none;margin-top:18px;padding:16px;background:rgba(74,92,58,.1);border:1px solid rgba(74,92,58,.3);color:var(--vigne);font-size:14px;text-align:center}
+.form-ok.show{display:block}
+.pro-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(74,92,58,.1);border:1px solid rgba(74,92,58,.3);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--vigne);font-weight:700;margin-bottom:16px}
+/* SÉPARATEURS SECTION */
+section + section::before,
+section + div.vig-band::before,
+div.vig-band + section::before {
+  content:'';display:block;height:1px;
+  background:linear-gradient(to right,transparent,rgba(184,132,31,.25),transparent);
+  margin:0;
+}
+
+/* FOOTER */
+.footer{background:var(--ard);padding:52px 52px 40px;text-align:center}
+.f-logos{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:22px;flex-wrap:wrap}
+.f-muska{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--or-l);letter-spacing:.18em}
+.f-div{width:1px;height:36px;background:rgba(245,240,232,.18)}
+.f-terra{font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:.2em;color:rgba(245,240,232,.45);font-weight:600}
+.f-links{display:flex;justify-content:center;gap:24px;margin-bottom:20px;flex-wrap:wrap}
+.f-sep{width:60px;height:1px;background:rgba(184,132,31,.35);margin:20px auto}
+.f-links a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.35);text-decoration:none;font-weight:600;transition:color .2s}
+.f-links a:hover{color:var(--or-l)}
+.legal{font-size:10px;line-height:1.95;color:rgba(245,240,232,.3);max-width:860px;margin:0 auto}
+/* COOKIES */
+#cookies{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);z-index:8000;background:var(--ard-m);border:1px solid rgba(184,132,31,.25);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;width:calc(100% - 48px);max-width:640px;transition:transform .5s;font-size:10.5px;color:rgba(245,240,232,.65)}
+#cookies.show{transform:translateX(-50%) translateY(0)}
+#cookies button{flex-shrink:0;padding:9px 20px;background:var(--or-d);color:var(--blanc);border:none;font-size:8px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;cursor:pointer}
+/* RESPONSIVE */
+@media(max-width:960px){
+  .n-links,.n-cta{display:none}.burger{display:flex}
+  #sdots{display:none}
+  .w{padding:0 28px}.pad{padding:72px 0}.pads{padding:60px 0}
+  .prog-grid,.terroir-grid,.coff-grid,.xp-grid,.loc-grid,.c-layout,.nat-grid{grid-template-columns:1fr;gap:44px}
+  .prog-vis img{height:320px}
+  .panel.on{grid-template-columns:1fr}
+  .entrée-grid,.ter-split{grid-template-columns:1fr}
+  .ter-side{flex-direction:row;height:240px}
+  .prest-grid{grid-template-columns:1fr 1fr}
+  .re-trio{grid-template-columns:1fr}
+  .int-grid{grid-template-columns:1fr 1fr}
+  .int-tall{height:280px}.int-cell{height:220px}
+  .int-duo{grid-template-columns:1fr}
+  .c-form{padding:28px}
+  .vig-text{left:28px}
+  .archi-label{left:28px;bottom:28px}
+  .contact-hero-text{left:28px;right:28px}
+  .ter-stats{gap:28px}
+}
+@media(max-width:960px){
+  .fiscal-grid{grid-template-columns:repeat(3,1fr) !important}
+}
+@media(max-width:600px){
+  .fiscal-grid{grid-template-columns:1fr 1fr !important}
+}
+@media(max-width:560px){
+  .fi-row{grid-template-columns:1fr}
+  .tabs{flex-wrap:wrap}.tab{flex:1 0 50%}
+  .p-info{padding:32px 22px}
+  .prest-grid{grid-template-columns:1fr}
+  .nat-duo{grid-template-columns:1fr}
+  .int-grid{grid-template-columns:1fr}
+  .entrée-grid{grid-template-columns:1fr}
+  .ter-split{grid-template-columns:1fr}
+  .ter-side{flex-direction:column;height:auto}
+  .ctabs{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div id="cookies"><span>Nous utilisons des cookies pour améliorer votre expérience.</span><button onclick="acceptCookies()">Accepter</button></div>
+<div id="sdots">
+  <div class="sdot on" data-s="cover" onclick="scrollToSection('cover')" title="Accueil"></div>
+  <div class="sdot" data-s="prog" onclick="scrollToSection('prog')" title="La Résidence"></div>
+  <div class="sdot" data-s="terroir" onclick="scrollToSection('terroir')" title="Terroir"></div>
+  <div class="sdot" data-s="cadre" onclick="scrollToSection('cadre')" title="Le Cadre"></div>
+  <div class="sdot" data-s="cuvées" onclick="scrollToSection('cuvées')" title="Nos Cuvées"></div>
+  <div class="sdot" data-s="intérieurs" onclick="scrollToSection('intérieurs')" title="Intérieurs"></div>
+  <div class="sdot" data-s="terrasses" onclick="scrollToSection('terrasses')" title="Terrasses"></div>
+  <div class="sdot" data-s="entrée" onclick="scrollToSection('entrée')" title="Entrée"></div>
+  <div class="sdot" data-s="prest" onclick="scrollToSection('prest')" title="Prestations"></div>
+  <div class="sdot" data-s="re" onclick="scrollToSection('re')" title="RE2020"></div>
+  <div class="sdot" data-s="loc" onclick="scrollToSection('loc')" title="Localisation"></div>
+  <div class="sdot" data-s="vr" onclick="scrollToSection('vr')" title="VR"></div>
+  <div class="sdot" data-s="coffret" onclick="scrollToSection('coffret')" title="Coffret"></div>
+  <div class="sdot" data-s="hub" onclick="scrollToSection('hub')" title="Hub"></div>
+  <div class="sdot" data-s="contact" onclick="scrollToSection('contact')" title="Contact"></div>
+</div>
+<nav id="nav" class="top">
+  <a href="#cover" class="n-logo">MUSKA</a>
+  <ul class="n-links">
+    <li><a href="#prog">La Résidence</a></li>
+    <li><a href="#terroir">Terroir</a></li>
+    <li><a href="#cuvées">Nos Cuvées</a></li>
+    <li><a href="#intérieurs">Intérieurs</a></li>
+    <li><a href="#prest">Prestations</a></li>
+    <li><a href="#loc">Localisation</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="n-cta">Demander un dossier</a>
+  <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mmenu" id="mm">
+  <a href="#prog" onclick="toggleMenu()">La Résidence</a>
+  <a href="#terroir" onclick="toggleMenu()">Terroir</a>
+  <a href="#cuvées" onclick="toggleMenu()">Nos Cuvées</a>
+  <a href="#intérieurs" onclick="toggleMenu()">Intérieurs</a>
+  <a href="#prest" onclick="toggleMenu()">Prestations</a>
+  <a href="#loc" onclick="toggleMenu()">Localisation</a>
+  <a href="#vr" onclick="toggleMenu()">Expérience VR</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+<!-- 1. COVER -->
+<section id="cover">
+  <div class="cbg"><img src="assets/cover.png" alt="Résidence Muska"></div>
+  <div class="cc">
+    <div class="ribbon">&#10022; Programme Neuf &middot; Frontignan &#10022;</div>
+    <p class="cey">TerraOccitana &middot; Programme Libre</p>
+    <h1 class="ctitle" id="ctitle"></h1>
+    <div class="crule"></div>
+    <p class="csub">Frontignan &middot; Pinède &amp; Minéral</p>
+    <p class="ctag">30 logements d’exception &middot; T2 → T5 &middot; Livraison 2028</p>
+  </div>
+  <div class="cscroll"><span>Découvrir</span><svg width="16" height="24" viewBox="0 0 16 24" fill="none"><rect x="1" y="1" width="14" height="22" rx="7" stroke="#8E6516" stroke-width="1.2"/><circle cx="8" cy="7" r="2.5" fill="#8E6516" opacity=".7"/></svg></div>
+</section>
+<!-- 2. RESIDENCE -->
+<section id="prog" class="bg-b">
+  <div class="w pad">
+    <div class="prog-grid">
+      <div class="rv">
+        <p class="eyebrow">La Residence</p>
+        <h2 class="h2">Un programme<br>d'<em>exception</em><br>en Occitanie</h2>
+        <div class="orn"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
+        <p class="lead">Nichée entre la pinède centenaire et les vignobles du Muscat AOC, la Résidence Muska propose 30 logements libres d’exception - des T2 aux T5 - avec des terrasses aux vues panoramiques sur l'étang de Thau et la Méditerranée.</p>
+        <div class="statgrid rv rv-d">
+          <div class="stat"><div class="sn counter" data-t="30">0</div><div class="sl">Logements libres</div></div>
+          <div class="stat"><div class="sn">T2-T5</div><div class="sl">Typologies</div></div>
+          <div class="stat"><div class="sn">2028</div><div class="sl">Livraison T1-T2</div></div>
+          <div class="stat"><div class="sn">R+2</div><div class="sl">Hauteur &middot; 2 Bâtiments</div></div>
+        </div>
+        <p class="lead rv rv-m" style="margin-top:22px;font-size:11.5px">Architecte : Cabinet B2BA / Pauline Barbat &middot; Promoteur : TerraOccitana SAS</p>
+      </div>
+      <div class="prog-vis">
+        <img src="assets/facade_sud.png" alt="Facade Sud Muska">
+        <div class="prog-badge">Facade Sud<br>Jardin paysager</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 3. TERROIR -->
+<section id="terroir" class="bg-c">
+  <div class="w pad">
+    <div class="terroir-grid">
+      <div class="ti-wrap">
+        <img src="assets/degustation.png" alt="Degustation Muscat de Frontignan">
+        <div class="ti-badge"><div class="tbn">AOC</div><div class="tbl">Muscat de Frontignan</div></div>
+      </div>
+      <div class="rv rv-r">
+        <p class="eyebrow">L’Âme du Terroir</p>
+        <h2 class="h2">Là où la vigne<br>devient <em>demeure</em></h2>
+        <div class="orn" style="margin-left:0"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
+        <p class="quote">Frontignan est l'un des plus anciens vignobles de France. Son Muscat, classé AOC depuis 1936, est reconnu dans le monde entier pour son caractère solaire et sa minéralité unique née du calcaire.</p>
+        <p class="lead">C'est dans ce territoire d’exception que Muska prend racine. Chaque logement est pensé comme une <em style="font-family:'Cormorant Garamond',serif;color:var(--or-d);font-style:italic">cuvée</em> : unique, identifiée, taillée pour un art de vivre rare.</p>
+        <div class="pills" style="margin-top:22px">
+          <span class="pill">AOC depuis 1936</span><span class="pill">Muscat à Petits Grains</span>
+          <span class="pill">Terroir calcaire</span><span class="pill">300 jours de soleil</span>
+          <span class="pill">Étang de Thau</span><span class="pill">Pinède préservée</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- VIGNOBLE -->
+<div class="vig-band">
+  <img src="assets/vignoble.png" alt="Vignobles de Frontignan">
+  <div class="vig-text rv">
+    <p class="eyebrow" style="color:rgba(245,240,232,.55)">Millésime 2028</p>
+    <h2 class="h2">Entre vignes<br>et <em>Méditerranée</em></h2>
+    <p>À Frontignan, la mer se lit dans chaque grappe de Muscat. Une adresse rare où le terroir et l'architecture parlent la même langue minérale.</p>
+  </div>
+</div>
+<!-- 4. CADRE -->
+<section id="cadre" class="bg-b">
+  <div class="w pad">
+    <div class="nat-grid">
+      <div class="rv">
+        <p class="eyebrow">Le Cadre de Vie</p>
+        <h2 class="h2">Un écrin naturel<br>sans <em>équivalent</em></h2>
+        <div class="orn" style="margin-left:0"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
+        <div class="nat-list">
+          <div class="nat-item"><div class="nat-dot"></div>Étang de Thau et Salins de Frontignan à proximité immédiate</div>
+          <div class="nat-item"><div class="nat-dot"></div>Plages méditerranéennes à 10 min à vélo</div>
+          <div class="nat-item"><div class="nat-dot"></div>Flamants roses, avocettes et faune protégée en bordure de site</div>
+          <div class="nat-item"><div class="nat-dot"></div>Port de Sète et son art de vivre à 8 km</div>
+          <div class="nat-item"><div class="nat-dot"></div>Montpellier et son TGV à 20 min, aéroport à 33 min</div>
+        </div>
+      </div>
+      <div class="rv rv-r"><img src="assets/terrasse_thau.png" alt="Vue etang de Thau" style="width:100%;height:340px;object-fit:cover;display:block"></div>
+    </div>
+    <div class="nat-duo rv rv-d">
+      <div class="nat-card">
+        <img src="assets/flamants.png" alt="Flamants roses Salins">
+        <div class="nat-cap"><div class="nat-cap-t">Les Salins de Frontignan</div><div class="nat-cap-s">Réserve naturelle &middot; Flamants roses</div></div>
+      </div>
+      <div class="nat-card">
+        <img src="assets/port_sete.png" alt="Port de Sète coucher soleil">
+        <div class="nat-cap"><div class="nat-cap-t">Sète, singulière île en mer</div><div class="nat-cap-s">8 km &middot; Art de vivre méditerranéen</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ARCHI NORD -->
+<div class="archi-band">
+  <img src="assets/facade_nord.png" alt="Facade Nord Muska">
+  <div class="archi-label rv">"Une architecture qui dialogue avec la pinède et le calcaire local."<br><span style="font-size:11px;font-style:normal;letter-spacing:.15em;opacity:.65;font-family:'Montserrat',sans-serif">Cabinet B2BA / Pauline Barbat, Architecte</span></div>
+</div>
+<!-- 5. CUVEES -->
+<section id="cuvées" class="bg-c">
+  <div class="w pad">
+    <div class="rv" style="text-align:center;margin-bottom:52px">
+      <p class="eyebrow">Nos Cuvées</p>
+      <h2 class="h2">Trouvez votre <em>millésime</em></h2>
+      <p class="lead" style="max-width:560px;margin:16px auto 0">Comme les grandes cuvées d'un domaine viticole, chaque appartement Muska possède sa propre identité.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab on" onclick="showTab(1,this)">Cuvée Élégance &middot; T2</button>
+      <button class="tab" onclick="showTab(2,this)">Cuvée Signature &middot; T3</button>
+      <button class="tab" onclick="showTab(3,this)">Cuvée Prestige &middot; T4</button>
+      <button class="tab" onclick="showTab(4,this)">Cuvée Collection &middot; T5</button>
+    </div>
+    <div class="panels">
+      <div class="panel on" id="p1">
+        <div class="p-info">
+          <p class="p-cey">Cuvée Élégance</p><h3 class="p-name">T2<br><em>Optimisé & Fonctionnel</em></h3>
+          <div class="specs">
+            <div class="spec"><span class="k">Surface habitable</span><span class="v">37,6–44,1 m²</span></div>
+            <div class="spec"><span class="k">Terrasse / Balcon</span><span class="v">11,6–13,2 m²</span></div>
+            <div class="spec"><span class="k">Exposition</span><span class="v">Sud / Est</span></div>
+            <div class="spec"><span class="k">Parking inclus</span><span class="v">1 place</span></div>
+            <div class="spec"><span class="k">Idéal pour</span><span class="v">Investissement · Pied-à-terre</span></div>
+          </div>
+          <div class="pbox"><span class="pf">À partir de</span><div class="pv">202 090 €</div><div class="pn">TTC &middot; Parking inclus &middot; TVA 20%</div></div>
+          <button class="p-cta" onclick="scrollToSection('contact')">Demander ce plan &rarr;</button>
+        </div>
+        <div class="p-plan"><img src="assets/plan_t2.png" alt="Plan T2"></div>
+      </div>
+      <div class="panel" id="p2">
+        <div class="p-info">
+          <p class="p-cey">Cuvée Signature</p><h3 class="p-name">T3<br><em>Luminosité &amp; équilibre</em></h3>
+          <div class="specs">
+            <div class="spec"><span class="k">Surface habitable</span><span class="v">58,5–66,7 m²</span></div>
+            <div class="spec"><span class="k">Terrasse / Balcon</span><span class="v">16,5–54,9 m²</span></div>
+            <div class="spec"><span class="k">Exposition</span><span class="v">Sud / Sud-Ouest</span></div>
+            <div class="spec"><span class="k">Parking inclus</span><span class="v">1 place</span></div>
+            <div class="spec"><span class="k">Idéal pour</span><span class="v">Famille · Résidence principale</span></div>
+          </div>
+          <div class="pbox"><span class="pf">À partir de</span><div class="pv">304 416 €</div><div class="pn">TTC &middot; Parking inclus &middot; TVA 20%</div></div>
+          <button class="p-cta" onclick="scrollToSection('contact')">Demander ce plan &rarr;</button>
+        </div>
+        <div class="p-plan"><img src="assets/plan_t3.png" alt="Plan T3"></div>
+      </div>
+      <div class="panel" id="p3">
+        <div class="p-info">
+          <p class="p-cey">Cuvée Prestige</p><h3 class="p-name">T4<br><em>Espace & Standing</em></h3>
+          <div class="specs">
+            <div class="spec"><span class="k">Surface habitable</span><span class="v">69,8–79,2 m²</span></div>
+            <div class="spec"><span class="k">Terrasse atypique</span><span class="v">19,9–23,6 m²</span></div>
+            <div class="spec"><span class="k">Exposition</span><span class="v">Sud-Ouest &middot; Vue sur la mer/Thau</span></div>
+            <div class="spec"><span class="k">Parking inclus</span><span class="v">2 places</span></div>
+            <div class="spec"><span class="k">Option jacuzzi</span><span class="v">T4 &amp; T5 uniquement</span></div>
+          </div>
+          <div class="pbox"><span class="pf">À partir de</span><div class="pv">406 934 €</div><div class="pn">TTC &middot; Parking inclus &middot; TVA 20%</div></div>
+          <button class="p-cta" onclick="scrollToSection('contact')">Demander ce plan &rarr;</button>
+        </div>
+        <div class="p-plan"><img src="assets/plan_t4.png" alt="Plan T4"></div>
+      </div>
+      <div class="panel" id="p4">
+        <div class="p-info">
+          <p class="p-cey">Cuvée Collection</p><h3 class="p-name">T5<br><em>Exclusivité & Vue panoramique</em></h3>
+          <div class="specs">
+            <div class="spec"><span class="k">Surface habitable</span><span class="v">86,5–102,1 m²</span></div>
+            <div class="spec"><span class="k">Grande terrasse</span><span class="v">26,3–75,6 m²</span></div>
+            <div class="spec"><span class="k">Exposition</span><span class="v">Panoramique 180°</span></div>
+            <div class="spec"><span class="k">Parking inclus</span><span class="v">2 places</span></div>
+            <div class="spec"><span class="k">Garage privatif</span><span class="v">Inclus</span></div>
+          <div class="spec"><span class="k">Option jacuzzi</span><span class="v">T4 &amp; T5 uniquement</span></div>
+          <div class="spec"><span class="k">Bien rare</span><span class="v">Vue Thau + Méditerranée</span></div>
+          </div>
+          <div class="pbox"><span class="pf">À partir de</span><div class="pv">492 264 €</div><div class="pn">TTC &middot; Parking inclus &middot; TVA 20%</div></div>
+          <button class="p-cta" onclick="scrollToSection('contact')">Demander ce plan &rarr;</button>
+        </div>
+        <div class="p-plan"><img src="assets/plan_t5.png" alt="Plan T5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 6. INTERIEURS -->
+<section id="intérieurs" class="bg-d">
+  <div style="padding:80px 0 0">
+    <div class="w">
+      <div class="rv" style="text-align:center;margin-bottom:48px">
+        <p class="eyebrow">L’Intérieur</p>
+        <h2 class="h2">Des espaces <em>pensés</em><br>pour l'art de vivre</h2>
+      </div>
+    </div>
+    <div class="int-hero rv"><img src="assets/int_salon_1.png" alt="Séjour vue sur la Méditerranée"><div class="int-label"><h3>Séjour ouvert sur la Méditerranée</h3><p>Grès cérame travertin 120×120 &middot; Menuiseries aluminium laqué</p></div></div>
+    <div class="int-duo" style="margin-top:3px">
+      <div class="int-duo-cell"><img src="assets/int_cuisine.png" alt="Cuisine ouverte"></div>
+      <div class="int-duo-cell"><img src="assets/int_chambre_1.png" alt="Chambre avec vue sur la mer"></div>
+    </div>
+    <div class="int-duo" style="margin-top:3px">
+      <div class="int-duo-cell"><img src="assets/int_chambre_2.png" alt="Chambre dorée vue sur la mer"></div>
+      <div class="int-duo-cell"><img src="assets/terrasse_angle.png" alt="Terrasse vue sur la Méditerranée"></div>
+    </div>
+    <div style="padding-bottom:80px"></div>
+  </div>
+</section>
+<!-- 7. TERRASSES -->
+<section id="terrasses" class="bg-b">
+  <div class="w pads">
+    <div class="rv" style="text-align:center;margin-bottom:48px">
+      <p class="eyebrow">Les Terrasses</p>
+      <h2 class="h2">Vivre <em>dehors</em>,<br>la Méditerranée à portée de main</h2>
+      <p class="lead" style="max-width:540px;margin:16px auto 0">Des terrasses aux volumes atypiques - jusqu'à 80 m² — conçues comme des pièces à vivre à ciel ouvert.</p>
+    </div>
+    <div class="ter-stats">
+      <div class="ter-stat-box"><div class="sn" style="font-size:56px"><span class="counter" data-t="300">0</span></div><div class="sl">Jours de soleil / an</div></div>
+      <div class="ter-divider"></div>
+      <div class="ter-stat-box"><div class="sn" style="font-size:56px">80 m²</div><div class="sl">Terrasse max T5</div></div>
+      <div class="ter-divider"></div>
+      <div class="ter-stat-box"><div class="sn" style="font-size:56px">180°</div><div class="sl">Vue panoramique attiques</div></div>
+    </div>
+  </div>
+  <div class="ter-split">
+    <div class="ter-main"><img src="assets/terrasse_angle.png" alt="Terrasse angle sunset"><div class="ter-ov"></div><div class="ter-stat"><div class="ter-stat-n">Cuvée<br>Prestige</div><div class="ter-stat-l">Terrasse d'angle &middot; Vue 180°</div></div></div>
+    <div class="ter-side">
+      <div class="ter-side-cell"><img src="assets/terrasse_lon.png" alt="Terrasse longueur etang"><div class="ter-ov"></div></div>
+      <div class="ter-side-cell"><img src="assets/terrasse_sunset.png" alt="Terrasse coucher soleil"><div class="ter-ov"></div></div>
+    </div>
+  </div>
+</section>
+<!-- 8. ENTREE -->
+<section id="entrée" class="bg-c">
+  <div class="w pads">
+    <div class="rv" style="text-align:center;margin-bottom:48px">
+      <p class="eyebrow">L’Entrée de la Residence</p>
+      <h2 class="h2">Premier regard,<br>première <em>impression</em></h2>
+      <p class="lead" style="max-width:520px;margin:16px auto 0">Du seuil au hall d'entrée, chaque détail - terrazzo, miroir doré, oliviers en pot, luminaires bouteilles - raconte l'univers Muska.</p>
+    </div>
+    <div class="entrée-grid rv">
+      <div class="entrée-cell"><img src="assets/boites_lettres.jpeg" alt="Espace boites aux lettres"><div class="entrée-label"><h4>L'espace d'accueil</h4><p>Pierre calcaire &middot; Signalétique dorée &middot; Végétalisation</p></div></div>
+      <div class="entrée-cell"><img src="assets/hall.png" alt="Hall d'entrée Muska"><div class="entrée-label"><h4>Hall d'entrée</h4><p>Terrazzo &middot; Miroir à grappe dorée &middot; Sol MUSKA brodé</p></div></div>
+    </div>
+  </div>
+</section>
+<!-- 9. PRESTATIONS -->
+<section id="prest" class="bg-b">
+  <div class="w pad">
+    <div class="rv" style="text-align:center;margin-bottom:8px">
+      <p class="eyebrow">La Carte des Prestations</p>
+      <h2 class="h2">Des accords <em>sur-mesure</em></h2>
+      <p class="lead" style="max-width:560px;margin:16px auto 0">Comme un grand domaine viticole, Muska vous offre la liberté de personnaliser votre appartement. Faïences, parquets, robinetterie, placards - chaque choix révèle votre style.</p>
+    </div>
+    <div class="prest-grid rv rv-d">
+      <div class="prest-card"><div class="prest-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div><div class="prest-t">Revêtements sols</div><div class="prest-d">Grès cérame travertin 120×120 lappato, parquet chêne BOEN/PANAGET, faïence 7,5×30</div></div>
+      <div class="prest-card"><div class="prest-ico"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div><div class="prest-t">Meubles salle de bain</div><div class="prest-d">Vasque chêne ou noyer, simple ou double vasque selon plan</div></div>
+      <div class="prest-card"><div class="prest-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div><div class="prest-t">Robinetterie</div><div class="prest-d">Finition dorée brossée ou inox brossé - Grohe ou Hansgrohe, lot de 3 pièces</div></div>
+      <div class="prest-card"><div class="prest-ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="M8 4v16M2 12h6"/></svg></div><div class="prest-t">Placards sur mesure</div><div class="prest-d">Blanc laqué, chêne, miroir ou verre satiné - portes coulissantes</div></div>
+      <div class="prest-card"><div class="prest-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="prest-t">Options TMA</div><div class="prest-d">Travaux Modificatifs Acquéreurs - à formaliser avant cloisonnement (mois 12)</div></div>
+    </div>
+    <div style="text-align:center;margin-top:36px"><button class="p-cta" onclick="scrollToSection('contact')">Télécharger la Carte des Prestations &darr;</button></div>
+  </div>
+</section>
+
+<!-- FISCALITE -->
+<section id="fiscal" class="bg-c">
+  <div class="w pad">
+    <div class="rv" style="text-align:center;margin-bottom:52px">
+      <p class="eyebrow">Avantages Fiscaux</p>
+      <h2 class="h2">Investir malin,<br>investir <em>serein</em></h2>
+      <p class="lead" style="max-width:580px;margin:16px auto 0">L'acquisition d'un logement neuf en VEFA offre des avantages fiscaux significatifs, particulièrement attractifs pour les primo-accédants et les investisseurs en résidence principale.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(184,132,31,.15);margin-top:52px" class="fiscal-grid rv rv-d" class="rv rv-d">
+      <div style="background:var(--blanc);padding:36px 28px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--or-d);line-height:1">2-3%</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ard);margin:12px 0 8px">Frais de notaire réduits</div>
+        <div style="font-size:13px;color:var(--grey);line-height:1.6;font-weight:300">En logement neuf VEFA, les frais de notaire sont de 2 à 3% contre 7-8% dans l'ancien.</div>
+      </div>
+      <div style="background:var(--blanc);padding:36px 28px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--or-d);line-height:1">PTZ</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ard);margin:12px 0 8px">Prêt à Taux Zéro</div>
+        <div style="font-size:13px;color:var(--grey);line-height:1.6;font-weight:300">Frontignan est classée en zone B2 — éligible au PTZ. Jusqu'à 40% du prix financé sans intérêts pour les primo-accédants en résidence principale, sous conditions de ressources.</div>
+      </div>
+      <div style="background:var(--blanc);padding:36px 28px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--or-d);line-height:1">2 ans</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ard);margin:12px 0 8px">Exonération taxe foncière</div>
+        <div style="font-size:13px;color:var(--grey);line-height:1.6;font-weight:300">Exonération de taxe foncière pendant 2 ans après livraison du logement neuf, sur demande.</div>
+      </div>
+      <div style="background:var(--blanc);padding:36px 28px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--or-d);line-height:1">VEFA</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ard);margin:12px 0 8px">Sécurité VEFA</div>
+        <div style="font-size:13px;color:var(--grey);line-height:1.6;font-weight:300">Garantie Financière d'Achèvement incluse. Paiements échelonnés selon avancement des travaux. Patrimoine sécurisé dès la réservation.</div>
+      </div>
+      <div style="background:var(--blanc);padding:36px 28px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--or-d);line-height:1">TVA</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ard);margin:12px 0 8px">TVA 20% logement neuf</div>
+        <div style="font-size:13px;color:var(--grey);line-height:1.6;font-weight:300">Taux standard TVA 20% applicable en accession libre neuve. Consultez votre notaire pour toute situation particulière.</div>
+      </div>
+    </div>
+    <div style="margin-top:28px;padding:20px 28px;background:rgba(184,132,31,.07);border:1px solid rgba(184,132,31,.25);font-size:11px;color:var(--grey);font-style:italic;text-align:center" class="rv">
+      Informations fiscales à titre indicatif — conditions sous réserve de la législation en vigueur. Éligibilité PTZ en zone B2 sous conditions de ressources et primo-accession. Consultez votre notaire ou conseiller bancaire pour une simulation personnalisée.
+    </div>
+  </div>
+</section>
+<!-- 10. RE2020 -->
+<section id="re">
+  <div class="re-wrap">
+    <div class="re-bg"><img src="assets/panoramique.png" alt=""></div>
+    <div class="w pad" style="position:relative;z-index:1">
+      <div class="rv" style="text-align:center;margin-bottom:44px">
+        <p class="eyebrow" style="color:rgba(245,240,232,.5)">Notre Engagement</p>
+        <h2 class="h2" style="color:var(--blanc)">Bâtir pour<br><em>demain</em></h2>
+        <p class="lead" style="max-width:520px;margin:16px auto 0;color:rgba(245,240,232,.55)">Certifiée RE2020 et labellisée BBCA Bas-Carbone, Muska intègre des matériaux biosourcés et des systèmes énergétiques performants.</p>
+      </div>
+      <div class="re-trio rv rv-d">
+        <div class="re-card"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="9" stroke="#a8d070" stroke-width="1.2"/><path d="M17 4v3M17 27v3M4 17h3M27 17h3" stroke="#a8d070" stroke-width="1.2"/></svg><div class="re-card-t">Énergie Passive</div><div class="re-card-d">DPE A/B cible, moins de 50 kWh/m²/an. PAC air/eau collective + ventilo-convecteurs Ciat. COP supérieur à 3,5. Charges maîtrisées.</div></div>
+        <div class="re-card"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M17 5Q21 11 27 13Q21 15 17 27Q13 15 7 13Q13 11 17 5Z" stroke="#a8d070" stroke-width="1.2" fill="rgba(168,208,112,.18)"/></svg><div class="re-card-t">Bas Carbone</div><div class="re-card-d">Béton CEM II/III, matériaux biosourcés certifiés. Réduction de 40% des émissions vs standard. Label BBCA.</div></div>
+        <div class="re-card"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><path d="M9 27Q9 17 17 11Q25 17 25 27" stroke="#a8d070" stroke-width="1.2"/></svg><div class="re-card-t">Garanties Complètes</div><div class="re-card-d">Décennale 10 ans &middot; Biennale 2 ans &middot; Parfait achèvement 1 an &middot; GFA incluse.</div></div>
+      </div>
+      <div class="certifs rv"><span class="certif">RE2020</span><span class="certif">BBCA Bas-Carbone</span><span class="certif">HQE</span><span class="certif">GFA incluse</span><span class="certif">PMR accessible</span></div>
+    </div>
+  </div>
+</section>
+<!-- 11. LOCALISATION -->
+<section id="loc" class="bg-c">
+  <div class="w pad">
+    <div class="loc-grid">
+      <div class="rv">
+        <p class="eyebrow">Localisation</p>
+        <h2 class="h2">Avenue de la<br><em>Marjolaine</em><br>Frontignan (34)</h2>
+        <div class="orn" style="margin-left:0"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
+        <div class="loc-items">
+          <div class="loc-item"><div class="loc-ico"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div><div><div class="loc-t">Montpellier</div><div class="loc-d">20 min &middot; TGV Paris 3h20</div></div></div>
+          <div class="loc-item"><div class="loc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><div class="loc-t">Sète</div><div class="loc-d">8 km &middot; 10 min en voiture</div></div></div>
+          <div class="loc-item"><div class="loc-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="loc-t">Plages méditerranéennes</div><div class="loc-d">10 min à vélo &middot; 5 min en voiture</div></div></div>
+          <div class="loc-item"><div class="loc-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><div class="loc-t">Commerces, écoles, services</div><div class="loc-d">Centre-ville Frontignan à 5 min</div></div></div>
+          <div class="loc-item"><div class="loc-ico"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><div class="loc-t">Aéroport Montpellier-Méditerranée</div><div class="loc-d">33 min</div></div></div>
+        </div>
+      </div>
+      <div class="loc-map"><img src="assets/carte_frontignan.png" alt="Carte localisation Avenue de la Marjolaine Frontignan"></div>
+    </div>
+  </div>
+</section>
+<!-- 12. VR -->
+<section id="vr">
+  <div class="vr-wrap">
+    <div class="vr-bg"><img src="assets/panoramique.png" alt=""></div>
+    <div class="w pad">
+      <div class="xp-grid">
+        <div class="rv">
+          <p class="eyebrow" style="color:rgba(245,240,232,.5)">Expérience d'Achat</p>
+          <h2 class="h2" style="color:var(--blanc)">Visitez votre<br>appartement <em>avant</em><br>de le choisir</h2>
+          <div class="orn" style="margin-left:0"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
+          <p class="lead" style="color:rgba(245,240,232,.65)">Notre bulle de vente Muska propose une expérience inédite : visiter votre futur appartement en réalité virtuelle et configurer vos prestations en temps réel.</p>
+          <div class="xp-list">
+            <div class="xp-item"><span class="xp-n">I.</span><span>Visite 3D immersive en casque VR</span></div>
+            <div class="xp-item"><span class="xp-n">II.</span><span>Simulation des vues depuis votre terrasse selon l'étage</span></div>
+            <div class="xp-item"><span class="xp-n">III.</span><span>Configurateur de prestations en temps réel</span></div>
+            <div class="xp-item"><span class="xp-n">IV.</span><span>Maquette physique de la résidence à l'échelle 1/100</span></div>
+          </div>
+          <button class="p-cta" onclick="scrollToSection('contact')" style="margin-top:28px;color:var(--or-l);border-color:var(--or-l)">Prendre rendez-vous &rarr;</button>
+        </div>
+        <div class="xp-img rv rv-r"><img src="assets/casque_vr.png" alt="Expérience VR Muska"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 13. COFFRET -->
+<section id="coffret" class="bg-d">
+  <div class="w pad">
+    <div class="coff-grid">
+      <div class="coff-img"><img src="assets/coffret.png" alt="Coffret Muscat Frontignan"></div>
+      <div class="rv rv-r">
+        <p class="eyebrow">Cadeau Réservataire</p>
+        <h2 class="big-q">Pour chaque réservation,<br>un <em>millésime</em><br>vous est offert.</h2>
+        <div class="orn" style="margin-left:0"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
+        <p class="lead">TerraOccitana offre à chaque réservataire un coffret de trois bouteilles de Muscat de Frontignan AOC Premier, sélectionné par les Vignerons de Frontignan.</p>
+        <div class="coff-badge">
+          <div class="cb-icon">🍾</div>
+          <div class="cb-text"><strong>Coffret Muscat de Frontignan AOC</strong><span>3 bouteilles &middot; Millésime sélectionné &middot; Gravure personnalisée<br>Offert pour toute réservation - dans la limite des stocks disponibles.</span></div>
+        </div>
+        <p class="alcool">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HUB TERRAOCCITANA -->
+<section id="hub" style="background:var(--ard);padding:80px 0;border-top:1px solid rgba(184,132,31,.15)">
+  <div class="w">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center">
+      <div>
+        <p style="font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--or-d);margin-bottom:14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:7px;opacity:.7">◆</span>TerraOccitana<span style="font-size:7px;opacity:.7">◆</span>
+        </p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--blanc);line-height:1.08;margin-bottom:20px">
+          Espace<br><em style="font-style:italic;color:var(--or-l)">Ressources</em>
+        </h2>
+        <div style="width:40px;height:1px;background:var(--or);opacity:.5;margin-bottom:20px"></div>
+        <p style="font-size:16px;color:rgba(245,240,232,.45);font-weight:300;line-height:1.8;max-width:380px">
+          Accédez aux documents, dossiers et ressources du programme Muska selon votre profil.
+        </p>
+        <p style="margin-top:24px;font-size:11px;color:rgba(245,240,232,.2);font-style:italic;letter-spacing:.05em">
+          Accès sur invitation · Plateforme en cours de déploiement
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1px">
+        <!-- Partenaires -->
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:26px 32px;background:rgba(245,240,232,.03);border:1px solid rgba(245,240,232,.07);text-decoration:none;transition:all .25s;gap:20px"
+           onmouseover="this.style.background='rgba(184,132,31,.1)';this.style.borderColor='rgba(184,132,31,.3)'"
+           onmouseout="this.style.background='rgba(245,240,232,.03)';this.style.borderColor='rgba(245,240,232,.07)'">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--blanc);margin-bottom:5px">Espace Partenaires</div>
+            <div style="font-size:13px;color:rgba(245,240,232,.35);font-weight:300">Apporteurs d'affaires · Notaires · CGP · Dossiers techniques</div>
+          </div>
+          <div style="flex-shrink:0;width:36px;height:36px;border:1px solid rgba(184,132,31,.35);display:flex;align-items:center;justify-content:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8922A" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <!-- Acquéreurs -->
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:26px 32px;background:rgba(245,240,232,.03);border:1px solid rgba(245,240,232,.07);text-decoration:none;transition:all .25s;gap:20px"
+           onmouseover="this.style.background='rgba(184,132,31,.1)';this.style.borderColor='rgba(184,132,31,.3)'"
+           onmouseout="this.style.background='rgba(245,240,232,.03)';this.style.borderColor='rgba(245,240,232,.07)'">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--blanc);margin-bottom:5px">Espace Réservataires</div>
+            <div style="font-size:13px;color:rgba(245,240,232,.35);font-weight:300">Suivi de chantier · Documents · Avancement des travaux</div>
+          </div>
+          <div style="flex-shrink:0;width:36px;height:36px;border:1px solid rgba(184,132,31,.35);display:flex;align-items:center;justify-content:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8922A" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. CONTACT -->
+<section id="contact">
+  <div class="contact-hero">
+    <img src="assets/terrasse_thau.png" alt="Vue panoramique Frontignan">
+    <div class="contact-hero-text"><p class="eyebrow">Nous contacter</p><h2 class="h2">Votre <em>cuvée</em><br>vous attend.</h2></div>
+  </div>
+  <div class="bg-c" style="padding:72px 0 108px">
+    <div class="w">
+      <div class="ctabs rv">
+        <button class="ctab on" onclick="showCtab('acq',this)">&#9654; Espace Acquéreurs</button>
+        <button class="ctab" onclick="showCtab('pro',this)">&#9654; Espace Professionnels</button>
+      </div>
+      <div class="cpanel on" id="cacq">
+        <div class="c-layout">
+          <div class="c-info rv">
+            <h3>Votre projet<br>commence ici</h3>
+            <p>Notre équipe commerciale vous accompagne de la première visite à la remise des clés.</p>
+            <div class="c-btns">
+              <a href="tel:+33490000000" class="c-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>04 90 00 00 00 - Équipe commerciale</a>
+              <a href="mailto:contact@terraoccitana-promotion.com" class="c-btn"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@terraoccitana-promotion.com</a>
+              <button class="c-btn" onclick="scrollToSection('vr')"><svg viewBox="0 0 24 24"><path d="M1 6s2-2 6-2 6 2 6 2M1 6v8l4 2 8-2V6M13 6s2-2 6-2 2 2 2 2v8l-6 2"/></svg>Réserver une visite VR</button>
+            </div>
+          </div>
+          <div class="c-form rv rv-r">
+            <form onsubmit="submitForm(event,'fok')">
+              <div class="fi-row">
+                <div class="fi"><label>Prénom *</label><input name="prenom" required placeholder="Votre prenom"></div>
+                <div class="fi"><label>Nom *</label><input name="nom" required placeholder="Votre nom"></div>
+              </div>
+              <div class="fi-row">
+                <div class="fi"><label>Email *</label><input name="email" type="email" required placeholder="votre@email.com"></div>
+                <div class="fi"><label>Téléphone</label><input name="tel" type="tel" placeholder="06 xx xx xx xx"></div>
+              </div>
+              <div class="fi"><label>Cuvée souhaitée</label><select name="typo"><option>Cuvée Élégance - T2 (dès 202 090 €)</option><option>Cuvée Signature - T3 (dès 304 416 €)</option><option>Cuvée Prestige - T4 (dès 406 934 €)</option><option>Cuvée Collection - T5 (dès 492 264 €)</option><option>Je n'ai pas encore choisi</option></select></div>
+              <div class="fi ff"><label>Votre projet</label><textarea name="msg" placeholder="Résidence principale, secondaire, investissement..."></textarea></div>
+              <button type="submit" class="btn-sub">Envoyer ma demande - Coffret Muscat offert 🍾</button>
+              <div class="form-ok" id="fok">Demande envoyée. Notre équipe vous contacte sous 24h.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="cpanel" id="cpro">
+        <div class="c-layout">
+          <div class="c-info rv">
+            <div class="pro-badge">&#10022; Espace Professionnels</div>
+            <h3>Partenaires<br>&amp; Apporteurs</h3>
+            <p>Agents immobiliers, notaires, CGP, institutionnels - rejoignez notre réseau de partenaires Muska et accédez au dossier technique complet.</p>
+            <div class="c-btns">
+              <a href="mailto:partenaires@terraoccitana-promotion.com" class="c-btn"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>partenaires@terraoccitana-promotion.com</a>
+              <a href="tel:+33490000000" class="c-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.29-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Ligne partenaires - 04 90 00 00 00</a>
+            </div>
+            <div style="margin-top:28px;padding:20px;border:1px solid rgba(184,132,31,.25);background:var(--blanc)">
+              <p class="eyebrow" style="margin-bottom:8px">Conditions apporteurs</p>
+              <p class="lead" style="font-size:11px">Honoraires négociables &middot; Dossier technique sur demande &middot; Accès plan masse et notice descriptive &middot; Conditions VEFA partenaire disponibles.</p>
+            </div>
+          </div>
+          <div class="c-form rv rv-r">
+            <form onsubmit="submitForm(event,'fprok')">
+              <div class="fi-row">
+                <div class="fi"><label>Prénom *</label><input name="prenom" required placeholder="Votre prenom"></div>
+                <div class="fi"><label>Nom *</label><input name="nom" required placeholder="Votre nom"></div>
+              </div>
+              <div class="fi"><label>Société / Réseau *</label><input name="societe" required placeholder="Agence, cabinet, reseau..."></div>
+              <div class="fi-row">
+                <div class="fi"><label>Email professionnel *</label><input name="email" type="email" required placeholder="pro@cabinet.com"></div>
+                <div class="fi"><label>Téléphone</label><input name="tel" type="tel" placeholder="06 xx xx xx xx"></div>
+              </div>
+              <div class="fi"><label>Nature du partenariat</label><select name="partenariat"><option>Apporteur d'affaires - Agent immobilier</option><option>Apporteur d'affaires - CGP / Notaire</option><option>Institutionnel / Collectivité</option><option>Promoteur partenaire</option><option>Autre</option></select></div>
+              <div class="fi ff"><label>Message</label><textarea name="msg" placeholder="Decrivez votre demande..."></textarea></div>
+              <button type="submit" class="btn-sub">Envoyer ma demande professionnelle</button>
+              <div class="form-ok" id="fprok">Demande reçue. Notre équipe partenaires vous contacte sous 48h.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<div class="footer">
+  <div class="f-logos"><span class="f-muska">MUSKA</span><div class="f-div"></div><span class="f-terra">TERRA OCCITANA &middot; PROMOTION</span></div>
+  <div class="f-links">
+    <a href="#prog">La Résidence</a><a href="#cuvées">Nos Cuvées</a><a href="#prest">Prestations</a><a href="#loc">Localisation</a><a href="#contact">Contact</a><a href="mailto:contact@terraoccitana-promotion.com">contact@terraoccitana-promotion.com</a>
+  </div>
+  <div class="f-sep"></div><p class="legal">TERRA OCCITANA SAS &middot; SCCV Muska &middot; Les visuels et plans sont indicatifs et non contractuels. Les appartements sont vendus non aménagés et non meublés. Programme soumis à l'obtention du permis de construire definitif. Livraison prévisionnelle T1-T2 2028. Prix TTC à titre indicatif, parking inclus, TVA 20%.</p>
+</div>
+<script>
+(function() {
+  "use strict";
+
+  // FALLBACK : forcer la visibilite de tous les elements rv/cr apres 150ms
+  setTimeout(function() {
+    document.querySelectorAll('.rv,.cr,.rv-d,.rv-m,.rv-r').forEach(function(el) {
+      el.classList.add('on');
+    });
+    // Déclencher les compteurs immédiatement au chargement
+    document.querySelectorAll('.counter').forEach(function(el) {
+      var t = parseInt(el.dataset.t);
+      if (!t) return;
+      var dur = 2000, start = performance.now();
+      function step(now) {
+        var p = Math.min((now - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.floor(ease * t).toLocaleString("fr-FR");
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, 400);
+
+  var nav = document.getElementById("nav");
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 80) nav.classList.remove("top");
+    else nav.classList.add("top");
+  }, {passive: true});
+  window.toggleMenu = function() { document.getElementById("mm").classList.toggle("open"); };
+  var ctitle = document.getElementById("ctitle");
+  if (ctitle) {
+    "MUSKA".split("").forEach(function(c, i) {
+      var s = document.createElement("span");
+      s.className = "ch"; s.textContent = c;
+      s.style.animationDelay = (0.62 + i * 0.12) + "s";
+      ctitle.appendChild(s);
+    });
+  }
+  if ("IntersectionObserver" in window) {
+    var rvObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("on"); });
+    }, {threshold: 0.08, rootMargin: "0px 0px -30px 0px"});
+    document.querySelectorAll(".rv,.cr").forEach(function(el) { rvObs.observe(el); });
+    var dots = document.querySelectorAll(".sdot");
+    var sIds = ["cover","prog","terroir","cadre","cuvées","intérieurs","terrasses","entrée","prest","re","loc","vr","coffret","contact"];
+    var dotObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          dots.forEach(function(d) {
+            if (d.dataset.s === e.target.id) d.classList.add("on");
+            else d.classList.remove("on");
+          });
+        }
+      });
+    }, {threshold: 0.35});
+    sIds.forEach(function(id) { var el = document.getElementById(id); if (el) dotObs.observe(el); });
+    function doCount(el) {
+      var t = parseInt(el.dataset.t), dur = 1600, start = performance.now();
+      function step(now) {
+        var p = Math.min((now - start) / dur, 1), ease = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.floor(ease * t).toLocaleString("fr-FR");
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var cntObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.querySelectorAll(".counter").forEach(doCount); });
+    }, {threshold: 0.35});
+    document.querySelectorAll(".statgrid,#terrasses").forEach(function(el) { cntObs.observe(el); });
+  }
+  window.showTab = function(id, btn) {
+    document.querySelectorAll(".panel").forEach(function(p) { p.classList.remove("on"); });
+    document.querySelectorAll(".tab").forEach(function(b) { b.classList.remove("on"); });
+    var panel = document.getElementById("p" + id);
+    if (panel) panel.classList.add("on");
+    btn.classList.add("on");
+  };
+  window.showCtab = function(id, btn) {
+    document.querySelectorAll(".cpanel").forEach(function(p) { p.classList.remove("on"); });
+    document.querySelectorAll(".ctab").forEach(function(b) { b.classList.remove("on"); });
+    var panel = document.getElementById("c" + id);
+    if (panel) panel.classList.add("on");
+    btn.classList.add("on");
+  };
+  window.submitForm = function(e, okId) {
+    e.preventDefault();
+    var fd = new FormData(e.target);
+    var prenom = fd.get("prenom") || "";
+    var nom = fd.get("nom") || "";
+    var subj = encodeURIComponent("Demande MUSKA - " + prenom + " " + nom);
+    var body = "Bonjour,\n\nNouvelle demande Résidence Muska.\n\n";
+    fd.forEach(function(v, k) { if (v) body += k + " : " + v + "\n"; });
+    body += "\nCordialement.";
+    window.location.href = "mailto:contact@terraoccitana-promotion.com?subject=" + subj + "&body=" + encodeURIComponent(body);
+    var ok = document.getElementById(okId);
+    if (ok) ok.classList.add("show");
+  };
+  window.acceptCookies = function() {
+    var el = document.getElementById("cookies");
+    if (el) el.style.display = "none";
+    try { localStorage.setItem("ck", "1"); } catch(ex) {}
+  };
+  setTimeout(function() {
+    try { if (!localStorage.getItem("ck")) { var el = document.getElementById("cookies"); if (el) el.classList.add("show"); } } catch(ex) {}
+  }, 2500);
+  window.scrollToSection = function(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({behavior: "smooth"});
+  };
+})();
+</script>
+</body>
+</html>
