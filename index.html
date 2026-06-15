@@ -344,6 +344,8 @@ div.vig-band + section::before {
   .n-logo{font-size:20px}
   .csub{font-size:13px}
   .ctag{font-size:12px}
+  .ribbon{gap:6px;padding:9px 14px;white-space:nowrap}
+  .ribbon::before,.ribbon::after{width:8px}
   .h2{font-size:clamp(32px,8vw,66px)}
   .lead{font-size:16px}
   .ter-side{flex-direction:column;height:auto}
@@ -355,6 +357,10 @@ div.vig-band + section::before {
   .sn{font-size:38px!important}
   .c-form{padding:20px 16px}
   .hub-grid > div:last-child{gap:1px!important}
+}
+@media(max-width:380px){
+  .ribbon{font-size:10px;gap:4px;padding:8px 10px}
+  .ribbon::before,.ribbon::after{width:6px}
 }
 @media(max-width:960px){
   .fiscal-grid{grid-template-columns:repeat(3,1fr) !important}
