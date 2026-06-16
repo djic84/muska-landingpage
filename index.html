@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Résidence Muska — Frontignan · Pinède &amp; Minéral</title>
 <meta name="description" content="Résidence Muska à Frontignan — programme immobilier neuf entre pinède et minéral, du T2 au T5, à deux pas de l'Étang de Thau.">
-<link rel="icon" type="image/png" href="assets/cover.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F5F0E8'/><rect x='10' y='10' width='12' height='12' transform='rotate(45 16 16)' fill='%238E6516'/></svg>">
 <meta property="og:title" content="Résidence Muska — Frontignan">
 <meta property="og:description" content="Programme immobilier neuf à Frontignan — du T2 au T5, entre pinède et minéral, à deux pas de l'Étang de Thau.">
-<meta property="og:image" content="assets/cover.png">
+<meta property="og:image" content="https://muska-landingpage.vercel.app/assets/cover.png">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,6 +156,7 @@ section{position:relative;overflow:hidden}
 .int-hero img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s}
 .int-hero:hover img{transform:scale(1.03)}
 .int-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,20,.55) 0%,transparent 55%)}
+.int-hero.plain::after{display:none}
 .int-label{position:absolute;bottom:40px;left:52px;z-index:2}
 .int-label h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,36px);color:var(--blanc);line-height:1.2}
 .int-label p{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,240,232,.6);margin-top:6px;font-weight:600}
@@ -407,8 +408,7 @@ div.vig-band + section::before {
     <h3>Opération immobilière</h3>
     <p>Le programme « Résidence Muska » est porté par la SCCV Muska, Société Civile Immobilière de Construction-Vente au capital de 1 000 €, dont le siège est situé Avenue de la Marjolaine, 34110 Frontignan, immatriculée au RCS de Montpellier, et représentée par son Gérant TerraOccitana SAS.</p>
     <h3>Hébergement</h3>
-    <p>Ce site est hébergé par Netlify, Inc. — 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA.</p>
-    <p>L'espace ressources (Hub) est hébergé par Vercel Inc. — 340 S Lemon Ave #4133, Walnut, CA 91789, USA.</p>
+    <p>Ce site et l'espace ressources (Hub) sont hébergés par Vercel Inc. — 340 S Lemon Ave #4133, Walnut, CA 91789, USA.</p>
     <h3>Propriété intellectuelle</h3>
     <p>L'ensemble des contenus (textes, visuels, plans, logos) présents sur ce site est la propriété de TerraOccitana SAS / SCCV Muska, sauf mention contraire, et ne peut être reproduit sans autorisation préalable.</p>
     <h3>Données personnelles &amp; cookies</h3>
@@ -443,6 +443,7 @@ div.vig-band + section::before {
     <li><a href="#cuvées">Nos Cuvées</a></li>
     <li><a href="#intérieurs">Intérieurs</a></li>
     <li><a href="#prest">Prestations</a></li>
+    <li><a href="#fiscal">Fiscalité</a></li>
     <li><a href="#loc">Localisation</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -455,6 +456,7 @@ div.vig-band + section::before {
   <a href="#cuvées" onclick="toggleMenu()">Nos Cuvées</a>
   <a href="#intérieurs" onclick="toggleMenu()">Intérieurs</a>
   <a href="#prest" onclick="toggleMenu()">Prestations</a>
+  <a href="#fiscal" onclick="toggleMenu()">Fiscalité</a>
   <a href="#loc" onclick="toggleMenu()">Localisation</a>
   <a href="#vr" onclick="toggleMenu()">Expérience VR</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
@@ -482,7 +484,7 @@ div.vig-band + section::before {
         <div class="orn"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
         <p class="lead">Nichée entre la pinède centenaire et les vignobles du Muscat AOC, la Résidence Muska propose 32 logements libres d’exception - des T2 aux T5 - avec des terrasses aux vues panoramiques sur l'étang de Thau et la Méditerranée.</p>
         <div class="statgrid rv rv-d">
-          <div class="stat"><div class="sn counter" data-t="32">0</div><div class="sl">Logements libres</div></div>
+          <div class="stat"><div class="sn counter" data-t="32">0</div><div class="sl">Logements</div></div>
           <div class="stat"><div class="sn">T2-T5</div><div class="sl">Typologies</div></div>
           <div class="stat"><div class="sn">2028</div><div class="sl">Livraison T3 2028</div></div>
           <div class="stat"><div class="sn">R+2</div><div class="sl">Hauteur &middot; 2 Bâtiments</div></div>
@@ -653,7 +655,7 @@ div.vig-band + section::before {
       </div>
     </div>
     <div class="int-hero rv"><img src="assets/int_salon_1.png" alt="Séjour vue sur la Méditerranée"><div class="int-label"><h3>Séjour ouvert sur la Méditerranée</h3><p>Grès cérame travertin 120×120 &middot; Menuiseries aluminium laqué</p></div></div>
-    <div class="int-hero rv" style="height:380px;margin-top:3px"><img src="assets/int_cuisine.png" alt="Cuisine ouverte"></div>
+    <div class="int-hero plain rv" style="height:380px;margin-top:3px"><img src="assets/int_cuisine.png" alt="Cuisine ouverte"></div>
     <div class="int-duo" style="margin-top:3px">
       <div class="int-duo-cell"><img src="assets/int_chambre_2.png" alt="Chambre dorée vue sur la mer"></div>
       <div class="int-duo-cell"><img src="assets/terrasse_angle.png" alt="Terrasse vue sur la Méditerranée"></div>
@@ -726,7 +728,7 @@ div.vig-band + section::before {
       <h2 class="h2">Investir malin,<br>investir <em>serein</em></h2>
       <p class="lead" style="max-width:580px;margin:16px auto 0">L'acquisition d'un logement neuf en VEFA offre des avantages fiscaux significatifs, particulièrement attractifs pour les primo-accédants et les investisseurs en résidence principale.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(184,132,31,.15);margin-top:52px" class="fiscal-grid rv rv-d" class="rv rv-d">
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(184,132,31,.15);margin-top:52px" class="fiscal-grid rv rv-d">
       <div style="background:var(--blanc);padding:36px 28px;text-align:center">
         <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--or-d);line-height:1">2-3%</div>
         <div style="font-size:13px;font-weight:700;color:var(--ard);margin:12px 0 8px">Frais de notaire réduits</div>
@@ -930,7 +932,7 @@ div.vig-band + section::before {
                 <div class="fi"><label>Email *</label><input name="email" type="email" required placeholder="votre@email.com"></div>
                 <div class="fi"><label>Téléphone</label><input name="tel" type="tel" placeholder="06 xx xx xx xx"></div>
               </div>
-              <div class="fi"><label>Cuvée souhaitée</label><select name="typo"><option>Cuvée Élégance - T2 (dès 202 325 €)</option><option>Cuvée Signature - T3 (dès 306 783 €)</option><option>Cuvée Prestige - T4 (dès 390 412 €)</option><option>Cuvée Collection - T5 (dès 477 520 €)</option><option>Je n'ai pas encore choisi</option></select></div>
+              <div class="fi"><label>Cuvée souhaitée</label><select name="typo"><option>Cuvée Élégance - T2 (dès 204 030 €)</option><option>Cuvée Signature - T3 (dès 306 783 €)</option><option>Cuvée Prestige - T4 (dès 390 412 €)</option><option>Cuvée Collection - T5 (dès 477 520 €)</option><option>Je n'ai pas encore choisi</option></select></div>
               <div class="fi ff"><label>Votre projet</label><textarea name="msg" placeholder="Résidence principale, secondaire, investissement..."></textarea></div>
               <button type="submit" class="btn-sub">Envoyer ma demande - Coffret Muscat offert 🍾</button>
               <div class="form-ok" id="fok">Demande envoyée. Notre équipe vous contacte sous 24h.</div>
@@ -1028,7 +1030,7 @@ div.vig-band + section::before {
     }, {threshold: 0.08, rootMargin: "0px 0px -30px 0px"});
     document.querySelectorAll(".rv,.cr").forEach(function(el) { rvObs.observe(el); });
     var dots = document.querySelectorAll(".sdot");
-    var sIds = ["cover","prog","terroir","cadre","cuvées","intérieurs","terrasses","entrée","prest","re","loc","vr","coffret","contact"];
+    var sIds = ["cover","prog","terroir","cadre","cuvées","intérieurs","terrasses","entrée","prest","fiscal","re","loc","vr","coffret","hub","contact"];
     var dotObs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) {
