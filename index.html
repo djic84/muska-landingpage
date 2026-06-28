@@ -316,8 +316,16 @@ div.vig-band + section::before {
 /* RESPONSIVE */
 @media(max-width:960px){
   .eyebrow{justify-content:center}
-  .h2,.lead,.quote{text-align:center}
+  .h2,.lead,.quote,.big-q{text-align:center}
   .quote{padding-left:0;border-left:none}
+  .pills{justify-content:center}
+  .nat-list,.xp-list,.loc-items{align-items:center;text-align:center}
+  .nat-item,.xp-item,.loc-item{justify-content:center}
+  .coff-badge{flex-direction:column;align-items:center;text-align:center}
+  .alcool{text-align:center}
+  .c-info h3,.c-info p{text-align:center}
+  .hub-txt{text-align:center}
+  .hub-txt p{justify-content:center}
   .n-links,.n-cta{display:none}.burger{display:flex}
   #sdots{display:none}
   nav{padding:0 20px}
@@ -455,6 +463,8 @@ div.vig-band + section::before {
   <a href="#terroir" onclick="toggleMenu()">Terroir</a>
   <a href="#cuvées" onclick="toggleMenu()">Nos Cuvées</a>
   <a href="#intérieurs" onclick="toggleMenu()">Intérieurs</a>
+  <a href="#terrasses" onclick="toggleMenu()">Terrasses</a>
+  <a href="#entrée" onclick="toggleMenu()">Entrée</a>
   <a href="#prest" onclick="toggleMenu()">Prestations</a>
   <a href="#fiscal" onclick="toggleMenu()">Fiscalité</a>
   <a href="#loc" onclick="toggleMenu()">Localisation</a>
@@ -479,7 +489,7 @@ div.vig-band + section::before {
   <div class="w pad">
     <div class="prog-grid">
       <div class="rv">
-        <p class="eyebrow">La Residence</p>
+        <p class="eyebrow">La Résidence</p>
         <h2 class="h2">Un programme<br>d'<em>exception</em><br>en Occitanie</h2>
         <div class="orn"><div class="orn-l"></div><div class="orn-d"></div><div class="orn-l"></div></div>
         <p class="lead">Nichée entre la pinède centenaire et les vignobles du Muscat AOC, la Résidence Muska propose 32 logements libres d’exception - des T2 aux T5 - avec des terrasses aux vues panoramiques sur l'étang de Thau et la Méditerranée.</p>
@@ -686,7 +696,7 @@ div.vig-band + section::before {
 <section id="entrée" class="bg-c">
   <div class="w pads">
     <div class="rv" style="text-align:center;margin-bottom:48px">
-      <p class="eyebrow">L’Entrée de la Residence</p>
+      <p class="eyebrow">L’Entrée de la Résidence</p>
       <h2 class="h2">Premier regard,<br>première <em>impression</em></h2>
       <p class="lead" style="max-width:520px;margin:16px auto 0">Du seuil au hall d'entrée, chaque détail - terrazzo, miroir doré, oliviers en pot, luminaires bouteilles - raconte l'univers Muska.</p>
     </div>
@@ -847,7 +857,7 @@ div.vig-band + section::before {
 <section id="hub" style="background:var(--ard);padding:80px 0;border-top:1px solid rgba(184,132,31,.15)">
   <div class="w">
     <div class="hub-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center">
-      <div>
+      <div class="hub-txt">
         <p style="font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--or-d);margin-bottom:14px;display:flex;align-items:center;gap:10px">
           <span style="font-size:7px;opacity:.7">◆</span>TerraOccitana<span style="font-size:7px;opacity:.7">◆</span>
         </p>
@@ -920,7 +930,7 @@ div.vig-band + section::before {
           <div class="c-form rv rv-r">
             <form onsubmit="submitForm(event,'fok')">
               <div class="fi-row">
-                <div class="fi"><label>Prénom *</label><input name="prenom" required placeholder="Votre prenom"></div>
+                <div class="fi"><label>Prénom *</label><input name="prenom" required placeholder="Votre prénom"></div>
                 <div class="fi"><label>Nom *</label><input name="nom" required placeholder="Votre nom"></div>
               </div>
               <div class="fi-row">
@@ -953,7 +963,7 @@ div.vig-band + section::before {
           <div class="c-form rv rv-r">
             <form onsubmit="submitForm(event,'fprok')">
               <div class="fi-row">
-                <div class="fi"><label>Prénom *</label><input name="prenom" required placeholder="Votre prenom"></div>
+                <div class="fi"><label>Prénom *</label><input name="prenom" required placeholder="Votre prénom"></div>
                 <div class="fi"><label>Nom *</label><input name="nom" required placeholder="Votre nom"></div>
               </div>
               <div class="fi"><label>Société / Réseau *</label><input name="societe" required placeholder="Agence, cabinet, reseau..."></div>
@@ -978,7 +988,7 @@ div.vig-band + section::before {
   <div class="f-links">
     <a href="#prog">La Résidence</a><a href="#cuvées">Nos Cuvées</a><a href="#prest">Prestations</a><a href="#loc">Localisation</a><a href="#contact">Contact</a><a href="mailto:contact@terraoccitana-promotion.com">contact@terraoccitana-promotion.com</a><a href="#" onclick="openLegal();return false;">Mentions légales</a>
   </div>
-  <div class="f-sep"></div><p class="legal">TERRA OCCITANA SAS &middot; SCCV Muska &middot; Les visuels et plans sont indicatifs et non contractuels. Les appartements sont vendus non aménagés et non meublés. Programme soumis à l'obtention du permis de construire definitif. Livraison prévisionnelle T3 2028. Prix TTC à titre indicatif, parking inclus, TVA 20%.</p>
+  <div class="f-sep"></div><p class="legal">TERRA OCCITANA SAS &middot; SCCV Muska &middot; Les visuels et plans sont indicatifs et non contractuels. Les appartements sont vendus non aménagés et non meublés. Programme soumis à l'obtention du permis de construire définitif. Livraison prévisionnelle T3 2028. Prix TTC à titre indicatif, parking inclus, TVA 20%.</p>
 </div>
 <script>
 (function() {
